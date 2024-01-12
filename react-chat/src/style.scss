@@ -61,6 +61,7 @@
         }
       }
 
+      //sign in
       button {
         background-color: #ff6f69;
         color: white;
@@ -68,6 +69,11 @@
         font-weight: bold;
         border: none;
         cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #2f2d52; // Button color on hover
+        }
       }
 
       label {
@@ -330,7 +336,7 @@
             cursor: pointer;
           }
 
-          // send button
+          // send
           button {
             border: none;
             padding: 10px 15px;
