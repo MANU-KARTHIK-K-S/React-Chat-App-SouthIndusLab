@@ -113,8 +113,9 @@
 
     .sidebar {
       flex: 1;
-      background-color: #3e3c61;
+      background-color: white;
       position: relative;
+      border-right: 1px solid #000;
 
       .navbar {
         display: flex;
@@ -145,11 +146,17 @@
           }
 
           button {
-            background-color: #5d5b8d;
-            color: #ddddf7;
-            font-size: 10px;
             border: none;
+            padding: 10px 15px;
+            color: white;
+            background-color: #ff6f69; // Default button color
             cursor: pointer;
+            transition: background-color 0.3s;
+      
+            &:hover {
+              background-color: yellow; // Button color on hover
+              color: #000;
+            }
             @include tablet {
               position: absolute;
               bottom: 10px;
@@ -170,7 +177,7 @@
             outline: none;
 
             &::placeholder {
-              color: lightgray;
+              color: darkgrey;
             }
           }
         }
@@ -181,11 +188,12 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: white;
+        color: black;
         cursor: pointer;
-
         &:hover {
-          background-color: #2f2d52;
+          background-color: lightcoral;
+        color: white;
+
         }
 
         img {
@@ -202,22 +210,23 @@
           }
           p {
             font-size: 14px;
-            color: lightgray;
+            color: black;
           }
         }
       }
     }
     .chat {
       flex: 2;
-
+      
       .chatInfo {
         height: 50px;
-        background-color: #5d5b8d;
+        background-color: lightcoral;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        color: lightgray;
+        color: white;
+        
 .userdp{        img {
           background-color: #ddddf7;
           height: 40px;
@@ -238,12 +247,15 @@
       }
 
       .messages {
-        background-color: #ddddf7;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210423/pngtree-vs-comic-zoom-background-focus-lines-empty-and-chat-bubble-image_639489.jpg);
+        background-size: cover;        
         padding: 10px;
         height: calc(100% - 160px);
         overflow: scroll; 
         overflow-y: scroll;
         overflow-x: hidden;
+      border-top: 1px solid #000;
+
       
         /* Stylish scrollbar customization */
         &::-webkit-scrollbar {
@@ -361,7 +373,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-      
+        border-top: 1px solid #000;
+        
         input {
           width: 100%;
           border: none;
