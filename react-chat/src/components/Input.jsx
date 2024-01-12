@@ -82,7 +82,9 @@ const Input = () => {
         value={text}
       />
       <div className="send">
+      <label htmlFor="file">
         <img src={Attach} alt="" />
+        </label>
         <input
           type="file"
           style={{ display: "none" }}
